@@ -8,7 +8,7 @@
 
 namespace Common
 {
-#define VERSION_STR "FPM v2.4.2 CHAD"
+#define VERSION_STR "FPM v2.5.1 CHAD"
 #ifdef _DEBUG
 #define BUILD_TYPE_STR "Debug "
 #elif defined DEBUGFAST
@@ -29,7 +29,7 @@ const std::string scm_rev_str = "Ishiiruka-Dolphin"
 #endif
 
 const std::string scm_rev_git_str = SCM_REV_STR;
-const std::string scm_rev_cache_str = "202307081829";
+const std::string scm_rev_cache_str = "202402131435";
 const std::string scm_desc_str = VERSION_STR;
 const std::string scm_branch_str = SCM_BRANCH_STR;
 const std::string scm_distributor_str = SCM_DISTRIBUTOR_STR;
