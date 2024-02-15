@@ -23,7 +23,7 @@ AboutDolphin::AboutDolphin(wxWindow* parent, wxWindowID id, const wxString& titl
   wxGenericStaticBitmap* const sbDolphinLogo = new wxGenericStaticBitmap(
       this, wxID_ANY, WxUtils::LoadScaledResourceBitmap("dolphin_logo", this));
 
-  const wxString DolphinText = _("Chadbuild - Dolphin");
+  const wxString DolphinText = _("SG Build - Dolphin");
   const wxString RevisionText = Common::scm_desc_str + " - By Motobug and Bird";
   const wxString CopyrightText =
       _("(c) 2003-2015+ Dolphin Team. \"GameCube\" and \"Wii\" are trademarks of Nintendo. Dolphin "
