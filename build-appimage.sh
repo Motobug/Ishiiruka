@@ -61,11 +61,10 @@ rm ./AppDir/usr/lib/libglib*
 rm ./AppDir/usr/lib/libgobject*
 
 # Bake an AppImage with the update metadata
-export VERSION="2.3"
+export VERSION="3.0.5"
 UPDATE_INFORMATION="${ZSYNC_STRING}" \
 	./Tools/linuxdeploy-update-plugin --appdir=./AppDir/
 
 
 mv Faster_Project_Plus-$VERSION-x86_64.AppImage Faster_Project_Plus-x86-64.AppImage
 mv Faster_Project_Plus-$VERSION-x86_64.AppImage.zsync Faster_Project_Plus-x86-64.AppImage.zsync
-
