@@ -89,7 +89,7 @@ jobs:
           cd .\Binary\x64\
           rm -r Languages
           fsutil file createnew FIX-VCRUNTIME140-ERROR.txt 0
-          echo "Download and install these: https://aka.ms/vs/16/release/vc_redist.x64.exe and https://aka.ms/vs/16/release/vc_redist.x86.exe" > .\FIX-VCRUNTIME140-ERROR.txt
+          echo "Download and install this: https://aka.ms/vs/17/release/vc_redist.x64.exe" > .\FIX-VCRUNTIME140-ERROR.txt
           Invoke-WebRequest -Uri https://github.com/jlambert360/PPlusLauncher/releases/download/2.2/vcruntime140_1.dll -UseBasicParsing -OutFile "vcruntime140_1.dll"
           mkdir Games
           cd Games
@@ -106,7 +106,7 @@ jobs:
 
       - name: "Publish"
         if: success()
-        uses: actions/upload-artifact@v2-preview
+        uses: actions/upload-artifact@v4
         with:
           name: windows
           path: "./artifact/"
@@ -114,7 +114,7 @@ jobs:
     strategy:
       fail-fast: false
     name: "Ubuntu Dolphin"
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
@@ -199,7 +199,7 @@ jobs:
 
       - name: "Publish"
         if: success()
-        uses: actions/upload-artifact@v2-preview
+        uses: actions/upload-artifact@v4
         with:
           name: linux
           path: "./artifact/"
@@ -289,7 +289,7 @@ jobs:
 
       - name: "Publish"
         if: success()
-        uses: actions/upload-artifact@v2-preview
+        uses: actions/upload-artifact@v4
         with:
           name: macOS
           path: "./artifact/"
