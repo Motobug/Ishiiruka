@@ -11,8 +11,8 @@ mkdir -p build
 pushd build
 cmake ${CMAKE_FLAGS} ../
 #Copy wx folder to Source/Core/
-cp /home/runner/work/Ishiiruka/Ishiiruka/Externals/wxWidgets3/include/wx /home/runner/work/Ishiiruka/Ishiiruka/build/Source/Core/ -r
-cp /home/runner/work/Ishiiruka/Ishiiruka/Externals/wxWidgets3/wx/* /home/runner/work/Ishiiruka/Ishiiruka/build/Source/Core/wx/
+cp /home/runner/work/Chadbuild-Dolphin/Chadbuild-Dolphin/Externals/wxWidgets3/include/wx /home/runner/work/Chadbuild-Dolphin/Chadbuild-Dolphin/build/Source/Core/ -r
+cp /home/runner/work/Chadbuild-Dolphin/Chadbuild-Dolphin/Externals/wxWidgets3/wx/* /home/runner/work/Chadbuild-Dolphin/Chadbuild-Dolphin/build/Source/Core/wx/
 make -j$(nproc)
 make install DESTDIR=./AppDir;
 popd
